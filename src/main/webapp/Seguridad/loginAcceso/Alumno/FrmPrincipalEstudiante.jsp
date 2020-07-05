@@ -210,7 +210,7 @@
               
                 <ul class="nav navbar-nav navbar-right">
                    <li class="active">
-                        <a href="index.html">Inicio</a>
+                        <a href="#">Inicio</a>
                     </li>
                                  
                    
