@@ -46,7 +46,7 @@ public class DetalleMatriculaServlet extends HttpServlet
                                      DetalleMatriculaDAO  objDetalleMatriculaDAO=new DetalleMatriculaDAO();         
                                      ArrayList<DetalleMatriculaBean>  listadetallematriculados=objDetalleMatriculaDAO.ListarCursosMatriculadosxProgramacionExamenes(objMatriculaBean);
                                      request.setAttribute("listacursosprogramados",listadetallematriculados);
-                                     getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/ExamenTraining/FrmRendirExamenInstrucciones.jsp").forward(request, response);
+                                     getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/FrmListarCursosMatriculados.jsp").forward(request, response);
                             break;
                         }    
                         case 2 :{
@@ -77,8 +77,13 @@ public class DetalleMatriculaServlet extends HttpServlet
                                      DetalleMatriculaDAO  objDetalleMatriculaDAO=new DetalleMatriculaDAO();         
                                      ArrayList<DetalleMatriculaBean>  listadetallematriculados=objDetalleMatriculaDAO.ListarCursosMatriculadosxProgramacionExamenes(objMatriculaBean);
                                      request.setAttribute("listacursosprogramados",listadetallematriculados);
-                                     getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/ExamenSupervisado/FrmResultadoExamenSupervisadoRendido.jsp").forward(request, response);    
-                        }     
+                                     getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/ExamenSupervisado/FrmResultadoExamenSupervisadoRendido.jsp").forward(request, response);
+                                     break;
+                        }
+                        case 4:{
+                             getServletContext().getRequestDispatcher("/Seguridad/loginAcceso/Alumno/FrmPrincipalEstudiante.jsp").forward(request, response);
+                            break;
+                        }
                                  
                                  
                 } 

@@ -79,7 +79,7 @@ public class ExamenAutoGeneradoServlet extends HttpServlet {
                     request.setAttribute("tiempo", String.valueOf(tiempo));                   
 //                    session.setAttribute("contador1", String.valueOf(1));
                    
-                    getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/ExamenSupervisado/FrmRendirExamenSupervisadoInstrucciones.jsp").forward(request, response);
+                    getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/ExamenSupervisado/FrmRendirExamenSupervisado.jsp").forward(request, response);
                     break;
                 }
                 case 3: {

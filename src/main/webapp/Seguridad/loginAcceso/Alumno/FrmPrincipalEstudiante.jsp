@@ -210,7 +210,7 @@
               
                 <ul class="nav navbar-nav navbar-right">
                    <li class="active">
-                        <a href="#">Inicio</a>
+                        <a href="javascript:InvocarMenu('<%=request.getContextPath()%>','DetalleMatricula',4,'')">Inicio</a>
                     </li>
                                  
                    
@@ -221,7 +221,7 @@
                                 <a href="javascript:InvocarMenu('<%=request.getContextPath()%>','DetalleMatricula',1,'')">Rendir Evaluaciones</a>
                             </li>
                             <li>
-                                <a href="javascript:InvocarMenu('<%=request.getContextPath()%>','DetalleMatricula',3,'')">Resultados de las Evaluaciones</a>
+                                <a href="javascript:InvocarMenu('<%=request.getContextPath()%>','DetalleMatricula',2,'')">Resultados de las Evaluaciones</a>
                             </li>
                             
                         </ul>
