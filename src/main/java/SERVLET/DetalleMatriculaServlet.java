@@ -46,7 +46,7 @@ public class DetalleMatriculaServlet extends HttpServlet
                                      DetalleMatriculaDAO  objDetalleMatriculaDAO=new DetalleMatriculaDAO();         
                                      ArrayList<DetalleMatriculaBean>  listadetallematriculados=objDetalleMatriculaDAO.ListarCursosMatriculadosxProgramacionExamenes(objMatriculaBean);
                                      request.setAttribute("listacursosprogramados",listadetallematriculados);
-                                     getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/FrmListarCursosMatriculados.jsp").forward(request, response);
+                                     getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/ExamenTraining/FrmRendirExamenInstrucciones.jsp").forward(request, response);
                             break;
                         }    
                         case 2 :{
@@ -63,7 +63,22 @@ public class DetalleMatriculaServlet extends HttpServlet
                                      request.setAttribute("listacursosprogramados",listadetallematriculados);
                                      getServletContext().getRequestDispatcher("/AplicacionExamen/ResultadoExamen/FrmListarCursosMatriculados.jsp").forward(request, response);    
                             break;
-                        }             
+                        }
+                        
+                        case 3:{
+                                String  codsemestrecad=request.getParameter("CODSEMESTRE");
+                                     int     codsemestre=Integer.parseInt(codsemestrecad); 
+                                     String  codalucad=request.getParameter("CODALU");
+                                     int     codalu=Integer.parseInt(codalucad); 
+                                     
+                                     MatriculaBean   objMatriculaBean=new MatriculaBean();
+                                                  objMatriculaBean.setCODSEMESTRE(codsemestre);
+                                                  objMatriculaBean.setCODALU(codalu);
+                                     DetalleMatriculaDAO  objDetalleMatriculaDAO=new DetalleMatriculaDAO();         
+                                     ArrayList<DetalleMatriculaBean>  listadetallematriculados=objDetalleMatriculaDAO.ListarCursosMatriculadosxProgramacionExamenes(objMatriculaBean);
+                                     request.setAttribute("listacursosprogramados",listadetallematriculados);
+                                     getServletContext().getRequestDispatcher("/AplicacionExamen/RendirExamen/ExamenSupervisado/FrmResultadoExamenSupervisadoRendido.jsp").forward(request, response);    
+                        }     
                                  
                                  
                 } 

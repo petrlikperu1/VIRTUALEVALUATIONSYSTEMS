@@ -221,7 +221,7 @@
                                 <a href="javascript:InvocarMenu('<%=request.getContextPath()%>','DetalleMatricula',1,'')">Rendir Evaluaciones</a>
                             </li>
                             <li>
-                                <a href="portfolio-2-col.html">Resultados de las Evaluaciones</a>
+                                <a href="javascript:InvocarMenu('<%=request.getContextPath()%>','DetalleMatricula',3,'')">Resultados de las Evaluaciones</a>
                             </li>
                             
                         </ul>
